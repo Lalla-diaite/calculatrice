@@ -3,37 +3,46 @@
     padding: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
-.but{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+.but,.buts{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 8px;
     gap: 8px;
 }
 .chiffre,.operation,.egal{
     padding: 10px 25px;
-    box-shadow: black ;   
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3) ;   
 }
 
 button{
     background-color: white;
     border: none;
     border-radius: 15px;
+    aspect-ratio: 1.5;
+    font-size: 1.2em;
 }
 .firstdiv{
     box-sizing: border-box;
     border: solid 2px whitesmoke;
-    box-shadow:2px black ;
+    box-shadow:2px 2px 8px rgba(0,0,0,0.2);
     background-color: rgb(231, 231, 227);
+   max-width: 320px;
+   width: 100%;
 }
 .section{
-    padding-top: 50px;
     align-items: center;
     display: flex;
     justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 input{
-    padding: 30px 50px;
+    width: 100%;
+    padding: 15px 1px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 1.8em;
 }
 .operc{
     background-color: blue;
@@ -41,20 +50,24 @@ input{
 .bleue,.operation{
     background-color: rgb(189, 203, 237);
 }
-#input{
-    border: none;
-}
-input{
-    border: none;
-    outline: none;
-}
 .clear,.clearall{
-    padding: 10px 25px;
+    padding: 10px 20px;
+    background-color: rgb(220,220,220);
 }
-.buts{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    gap: 5px;
+@media (max-width:660px){
+    .firstdiv{
+        width: 90%;
+    }
+    .section{
+        padding-top: 20px;
+    }
+    button{
+        padding: 6px 12px;
+        font-size: 0.9em;
+        aspect-ratio: unset;
+        min-width: 0px;
+    }
+    /* .chiffre,.operation,.egal,.clear,.clearall{
+        padding: 6px 12px; 
+    } */
 }
